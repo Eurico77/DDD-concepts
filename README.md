@@ -1,6 +1,4 @@
 # DDD-concepts
-In this repository, I am studying DDD concepts to apply my knowledge in practice.
-
 
 O Domain-Driven Design (DDD) é uma abordagem de design de software que se concentra na modelagem de domínio, onde o "domínio" se refere às regras de negócio e conceitos fundamentais de um aplicativo. O DDD visa criar uma representação de software que reflita de perto o mundo real, permitindo uma compreensão clara e uma implementação eficaz das funcionalidades de negócios.
 
