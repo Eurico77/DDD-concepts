@@ -6,4 +6,8 @@ export class Order {
     private customerId: string,
     private items: OrderItem[] = []
   ) {}
+
+  total(): number {
+    return this.items.reduce((acc, item: OrderItem) => acc + item.price, 0);
+  }
 }
