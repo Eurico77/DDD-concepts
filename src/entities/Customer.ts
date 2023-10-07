@@ -1,19 +1,26 @@
-class Costumer {
+import Address from './Address';
+
+export class Customer {
   constructor(
-    private _id: string,
-    private _name: string,
-    private _address: string
-  ) {}
-
-  get id(): string {
-    return this._id;
+    private readonly id: string,
+    private name: string,
+    private address: Address,
+    private active: boolean = true
+  ) {
+    this.validate();
   }
 
-  get name(): string {
-    return this._name;
+  changeName(name: string) {
+    this.name = name;
+    this.validate();
   }
 
-  get address(): string {
-    return this._address;
+  activate() {
+    if (!this.address) throw new Error('Customer must a ben have Address');
+    this.active = true;
+  }
+
+  validate() {
+    if (!this.name && !this.id) throw new Error('Properties are required');
   }
 }
