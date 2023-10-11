@@ -13,4 +13,4 @@ const item3 = new OrderItem('1', 'item 3', 15);
 
 const order = new Order('id', '123', [item1, item2, item3]);
 
-console.log(order);
+console.log(order.total());
