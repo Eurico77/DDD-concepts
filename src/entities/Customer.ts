@@ -21,6 +21,7 @@ export class Customer {
   }
 
   validate() {
-    if (!this.name && !this.id) throw new Error('Properties are required');
+    if (!this.name) throw new Error('Name is required');
+    if (!this.id) throw new Error('Id is required');
   }
 }
