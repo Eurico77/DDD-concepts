@@ -9,4 +9,18 @@ describe('Customer', () => {
     expect(customer).toBeDefined();
     expect(customer).toHaveProperty('name');
   });
+
+  it('deve exibir um erro ao tentar criar um customer sem id', () => {
+    const address = new Address('Rua dos bobos', 433, 'numero 0', 'Quixadá');
+    expect(() => new Customer('', 'Eurico', address)).toThrowError(
+      'Id is required'
+    );
+  });
+
+  it('deve exibir um erro ao tentar mudar um nome para vazio', () => {
+    const address = new Address('Rua dos bobos', 433, 'numero 0', 'Quixa');
+    expect(() =>
+      new Customer('2', 'Eurico', address).changeName('')
+    ).toThrowError('Name is required');
+  });
 });
