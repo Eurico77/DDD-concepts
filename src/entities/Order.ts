@@ -17,7 +17,7 @@ export class Order {
 
   total(): number {
     const result = this.items.reduce(
-      (acc, item: OrderItem) => acc + item.price,
+      (acc, item: OrderItem) => (acc += item.price * item.quantity),
       0
     );
     return result;
