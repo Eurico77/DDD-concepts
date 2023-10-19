@@ -1,7 +1,7 @@
 import { randomUUID } from 'crypto';
-import { Customer } from '../entities/Customer';
 import { Order } from '../entities/Order';
 import { OrderItem } from '../entities/OrderItem';
+import { Customer } from '../../Customer/entities/Customer';
 
 export class OrderService {
   static placeOrder(customer: Customer, items: OrderItem[]): Order {

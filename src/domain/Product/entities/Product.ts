@@ -1,4 +1,6 @@
-export class Product {
+import { ProductInterface } from './ProductInterface';
+
+export class Product implements ProductInterface {
   constructor(
     private id: string,
     private name: string,
@@ -18,15 +20,15 @@ export class Product {
     this.name = name;
   }
 
-  get getName() {
+  getName() {
     return this.name;
   }
 
-  get getId() {
+  getId() {
     return this.id;
   }
 
-  get price() {
+  getPrice() {
     return this._price;
   }
 

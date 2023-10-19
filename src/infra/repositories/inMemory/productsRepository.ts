@@ -1,5 +1,5 @@
-import { Product } from '../../../domain/entities/Product';
-import { ProductRepositoryInterface } from '../../../domain/repositories/productRepository';
+import { Product } from '../../../domain/Product/entities/Product';
+import { ProductRepositoryInterface } from '../../../domain/Product/repositories/productRepository';
 
 export class ProductRepository implements ProductRepositoryInterface {
   private products: Product[] = [];

@@ -1,5 +1,5 @@
-import { Address } from '../entities/Address';
-import { Customer } from '../entities/Customer';
+import { Address } from '../../Customer/entities/Address';
+import { Customer } from '../../Customer/entities/Customer';
 import { Order } from '../entities/Order';
 import { OrderItem } from '../entities/OrderItem';
 import { OrderService } from './orderService';
