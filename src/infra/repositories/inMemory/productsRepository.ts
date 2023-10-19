@@ -9,12 +9,12 @@ export class ProductRepository implements ProductRepositoryInterface {
   }
 
   async update(id: string, entity: Product): Promise<void> {
-    const oldProduct = this.products.find((product) => product.getId === id);
-    oldProduct.changeName(entity.getName);
+    const oldProduct = this.products.find((product) => product.getId() === id);
+    oldProduct.changeName(entity.getName());
   }
 
   async find(id: string): Promise<Product> {
-    return this.products.find((product) => product.getId === id);
+    return this.products.find((product) => product.getId() === id);
   }
 
   async findAll(): Promise<Product[]> {
